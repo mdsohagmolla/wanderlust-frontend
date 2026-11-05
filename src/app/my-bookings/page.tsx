@@ -12,7 +12,7 @@ const BOOKINGS_API_URL = `${process.env.NEXT_PUBLIC_API_URL}/my-bookings`;
  * Session and bookings both depend on the request, so this component streams
  * in behind <Suspense> instead of blocking the static page shell.
  */
-async function BookingsSection() {
+ export async function BookingsSection() {
   const session = await auth.api.getSession({
     headers: await headers(),
   });
